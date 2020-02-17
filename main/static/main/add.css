@@ -28,3 +28,17 @@ body {
 .menu li a:hover {
     background-color: #111111;
 }
+
+.add-note{
+    margin: 200px 100px 0px 550px;
+
+}
+
+.text-input {
+    margin: 10px 100px 0px 200px;
+    max-width: 600px;
+}
+
+.button-is-link button {
+    margin: 10px 100px 0px 900px;
+}

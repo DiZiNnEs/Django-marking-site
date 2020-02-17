@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>Add</title>
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'main/add.css' %}">
 </head>
@@ -19,7 +19,17 @@
     </div>
 </nav>
 <main>
-    <p>add</p>
+    <div class="add-note">
+        <p>Add a note</p>
+    </div>
+
+    <div class="text-input">
+        <textarea name="text" id="" cols="100" rows="10"></textarea>
+    </div>
+
+    <div class="button-is-link">
+        <button>Submit</button>
+    </div>
 </main>
 </body>
 </html>

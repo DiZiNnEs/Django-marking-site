@@ -1,15 +1,8 @@
-body {
-    paddding: 0;
-    margin: 0;
-    font-family: Arial;
-}
-
 .menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333333;
 }
 
 .menu ul li {
@@ -18,36 +11,12 @@ body {
 
 .menu ul li a {
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    margin: 0px 0px 0px 100px;
 }
 
-.menu li a:hover {
-    background-color: #111111;
+.menu ul li a:hover {
+    background-color: #4CAF50;
 }
-
-.link-add {
-    margin: 100px 100px 0px 150px
-}
-
-.link-add a {
-    text-decoration: none;
-    color: #45B0DC;
-}
-
-.link-add a:hover {
-
-}
-
-.text {
-    margin: 30px 120px;
-}
-
-.text p strong {
-    display: inline-block;
-    margin: 0px 0px 10px 0px;
-}
-
