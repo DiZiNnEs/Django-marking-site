@@ -20,12 +20,14 @@
 </nav>
 <main>
     <div>
+        {% for con in contacts %}
         <ul>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
+            <li><a href="">My VK: {{ con.vk }}</a></li>
+            <li><a href="">Telegram: {{ con.telegram }}</a></li>
+            <li><a href="">GitHub</a></li>
+            <li><a href="">Habr</a></li>
         </ul>
+        {% endfor %}
     </div>
 </main>
 </body>

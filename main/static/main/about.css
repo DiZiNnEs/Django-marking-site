@@ -28,3 +28,13 @@ body {
 .menu li a:hover {
     background-color: #111111;
 }
+
+.about_me {
+    margin: 250px 0px 0px 350px;
+}
+.about_me ol {
+    list-style-type: none;
+}
+.about_me ol li:nth-child(1) {
+
+}

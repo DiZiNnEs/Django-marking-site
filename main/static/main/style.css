@@ -1,8 +1,15 @@
+body {
+    paddding: 0;
+    margin: 0;
+    font-family: Arial;
+}
+
 .menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background-color: #333333;
 }
 
 .menu ul li {
@@ -11,12 +18,43 @@
 
 .menu ul li a {
     display: block;
-    color: black;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    margin: 0px 0px 0px 100px;
 }
 
-.menu ul li a:hover {
-    background-color: #4CAF50;
+.menu li a:hover {
+    background-color: #111111;
+}
+
+.link-add {
+    margin: 100px 100px 0px 150px
+}
+
+.link-add a {
+    text-decoration: none;
+    color: #45B0DC;
+}
+
+.link-add a:hover {
+
+}
+
+.nickname {
+    margin: 200px 0px 0px 200px;
+}
+.nickname p {
+    font-size: 40px;
+}
+
+.points {
+    margin: 10px 0px 0px 450px;
+}
+.points ol {
+    list-style-type: none;
+}
+.points ol li  {
+
 }

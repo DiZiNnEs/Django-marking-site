@@ -23,36 +23,15 @@
     <div class="link-add">
         <a href="{% url 'add' %}">Add new entry</a>
     </div>
-
+{% for note in notes %}
     <div class="text">
         <p>
-            <strong>Pub date: Sun Feb 16 17:11:40</strong>
+            <strong>{{ note.pub_date }}</strong>
             <br>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolores eius iste necessitatibus sequi?
-            Aperiam assumenda atque culpa dignissimos ipsam itaque laudantium magnam, nihil odio, quia reiciendis
-            reprehenderit tempore totam.
+            {{ note.text }}
         </p>
     </div>
-
-    <div class="text">
-        <p>
-            <strong>Pub date: Sun Feb 16 17:11:40</strong>
-            <br>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolores eius iste necessitatibus sequi?
-            Aperiam assumenda atque culpa dignissimos ipsam itaque laudantium magnam, nihil odio, quia reiciendis
-            reprehenderit tempore totam.
-        </p>
-    </div>
-
-    <div class="text">
-        <p>
-            <strong>Pub date: Sun Feb 16 17:11:40</strong>
-            <br>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolores eius iste necessitatibus sequi?
-            Aperiam assumenda atque culpa dignissimos ipsam itaque laudantium magnam, nihil odio, quia reiciendis
-            reprehenderit tempore totam.
-        </p>
-    </div>
+{% endfor %}
 </main>
 </body>
 </html>

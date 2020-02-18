@@ -17,9 +17,24 @@ class Contact(models.Model):
     telegram = models.CharField(max_length=100)
     github = models.CharField(max_length=100)
     habr = models.CharField(max_length=100)
+    name = 'contact for layout'
 
     def __str__(self):
-        return self.vk
+        return self.name
 
     class Meta:
         verbose_name_plural = 'contact'
+
+
+class About(models.Model):
+    full_name = models.CharField(max_length=40)
+    about_me = models.CharField(max_length=200)
+    telephone_number = models.IntegerField()
+    address = models.CharField(max_length=20)
+    name = 'about me'
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = 'about'

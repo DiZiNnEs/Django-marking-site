@@ -19,7 +19,16 @@
     </div>
 </nav>
 <main>
-    <p>about</p>
+    <div class="about_me">
+        {% for about in about_me %}
+            <ol>
+                <li>My name is: {{ about.full_name }}</li>
+                <li>About me: {{ about.about_me }}</li>
+                <li>Telephone number: {{ about.telephone_number }}</li>
+                <li>My address: {{ about.address }}</li>
+            </ol>
+        {% endfor %}
+    </div>
 </main>
 </body>
 </html>

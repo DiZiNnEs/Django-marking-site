@@ -1,12 +1,15 @@
 from django.shortcuts import render
-
+from .models import Notes,Contact, About
 
 def index(request):
     return render(request, 'main/index.html')
 
 
 def home(request):
-    return render(request, 'main/home.html')
+    notes = Notes.objects.all()
+    return render(request, 'main/home.html', {
+        'notes': notes,
+    })
 
 
 def add(request):
@@ -14,8 +17,14 @@ def add(request):
 
 
 def contact(request):
-    return render(request, 'main/contact.html')
+    contacts = Contact.objects.all()
+    return render(request, 'main/contact.html', {
+        'contacts': contacts,
+    })
 
 
 def about(request):
-    return render(request, 'main/about.html')
+    abouts_me = About.objects.all()
+    return render(request, 'main/about.html', {
+        'about_me' : abouts_me
+    })
