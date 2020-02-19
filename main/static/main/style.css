@@ -45,6 +45,7 @@ body {
 .nickname {
     margin: 200px 0px 0px 200px;
 }
+
 .nickname p {
     font-size: 40px;
 }
@@ -52,9 +53,11 @@ body {
 .points {
     margin: 10px 0px 0px 450px;
 }
+
 .points ol {
     list-style-type: none;
 }
-.points ol li  {
+
+.points ol li {
 
 }

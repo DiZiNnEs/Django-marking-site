@@ -19,14 +19,17 @@
     </div>
 </nav>
 <main>
-    <div>
+    <div class="my-contacts">
+        <h1>My Contacts:</h1>
+    </div>
+    <div class="contacts">
         {% for con in contacts %}
-        <ul>
-            <li><a href="">My VK: {{ con.vk }}</a></li>
-            <li><a href="">Telegram: {{ con.telegram }}</a></li>
-            <li><a href="">GitHub</a></li>
-            <li><a href="">Habr</a></li>
-        </ul>
+            <ul>
+                <li><a href="{{ con.vk }}">My VK</a></li>
+                <li><a href="{{ con.telegram }}">Telegram</a></li>
+                <li><a href="{{ con.github }}">GitHub</a></li>
+                <li><a href="{{ con.habr }}">Habr</a></li>
+            </ul>
         {% endfor %}
     </div>
 </main>

@@ -23,15 +23,15 @@
     <div class="link-add">
         <a href="{% url 'add' %}">Add new entry</a>
     </div>
-{% for note in notes %}
-    <div class="text">
-        <p>
-            <strong>{{ note.pub_date }}</strong>
-            <br>
-            {{ note.text }}
-        </p>
-    </div>
-{% endfor %}
+    {% for note in notes %}
+        <div class="text">
+            <p>
+                <strong>{{ note.pub_date }}</strong>
+                <br>
+                {{ note.text }}
+            </p>
+        </div>
+    {% endfor %}
 </main>
 </body>
 </html>

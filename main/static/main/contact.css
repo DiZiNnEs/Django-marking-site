@@ -29,3 +29,34 @@ body {
     background-color: #111111;
 }
 
+.my-contacts {
+    margin: 200px 0px 0px 300px;
+}
+
+.contacts {
+    margin: 0px 0px 0px 300px;
+}
+
+.contacts ul {
+    list-style-type: none;
+}
+
+.contacts ul li {
+    text-decoration: none;
+}
+
+.contacts ul li a {
+    text-decoration: none;
+    color: blue;
+}
+
+.contacts ul li a:hover {
+    color: green;
+}
+
+.contacts ul li a:active {
+    color: black;
+}
+
+
+

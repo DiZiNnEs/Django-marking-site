@@ -1,19 +1,34 @@
-from django.shortcuts import render
-from .models import Notes,Contact, About
+from django.shortcuts import render, redirect
+from .models import Notes, Contact, About
+from .forms import EntryNotes
+
 
 def index(request):
     return render(request, 'main/index.html')
 
 
 def home(request):
-    notes = Notes.objects.all()
+    notes = Notes.objects.order_by('-pub_date')
     return render(request, 'main/home.html', {
         'notes': notes,
     })
 
 
 def add(request):
-    return render(request, 'main/add.html')
+    if request.method == "POST":
+        form = EntryNotes(request.POST)
+
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    else:
+        form = EntryNotes()
+
+    # form = EntryNotes
+
+    context = {'form': form}
+
+    return render(request, 'main/add.html', context)
 
 
 def contact(request):
@@ -26,5 +41,5 @@ def contact(request):
 def about(request):
     abouts_me = About.objects.all()
     return render(request, 'main/about.html', {
-        'about_me' : abouts_me
+        'about_me': abouts_me
     })

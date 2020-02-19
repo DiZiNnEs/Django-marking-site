@@ -22,14 +22,16 @@
     <div class="add-note">
         <p>Add a note</p>
     </div>
+    <form method="POST" action="{% url 'add' %}">
+        {% csrf_token %}
+        <div class="text-input">
+            {{ form.text }}
+        </div>
 
-    <div class="text-input">
-        <textarea name="text" id="" cols="100" rows="10"></textarea>
-    </div>
-
-    <div class="button-is-link">
-        <button>Submit</button>
-    </div>
+        <div class="button-is-link">
+            <button>Submit</button>
+        </div>
+    </form>
 </main>
 </body>
 </html>
