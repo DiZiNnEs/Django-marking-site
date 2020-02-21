@@ -30,7 +30,7 @@ body {
 }
 
 .link-add {
-    margin: 100px 100px 0px 150px
+    margin: 50px 100px 0px 150px
 }
 
 .link-add a {
@@ -48,6 +48,6 @@ body {
 
 .text p strong {
     display: inline-block;
-    margin: 0px 0px 10px 0px;
+    margin: 10px 0px 10px 0px;
 }
 

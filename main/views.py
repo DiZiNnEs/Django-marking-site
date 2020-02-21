@@ -43,3 +43,16 @@ def about(request):
     return render(request, 'main/about.html', {
         'about_me': abouts_me
     })
+
+
+def sign_up(request):
+    signup = ...
+    return render (request, 'main/sign_up.html', {
+
+    })
+
+
+def log_up(reqeust):
+    return render(reqeust, 'main/log_up.html',{
+
+    })
