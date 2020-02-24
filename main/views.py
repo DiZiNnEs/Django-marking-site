@@ -24,7 +24,6 @@ def add(request):
     else:
         form = EntryNotes()
 
-    # form = EntryNotes
 
     context = {'form': form}
 
@@ -46,8 +45,7 @@ def about(request):
 
 
 def sign_up(request):
-    signup = ...
-    return render (request, 'main/sign_up.html', {
+    return render(request, 'main/sign_up.html', {
 
     })
 

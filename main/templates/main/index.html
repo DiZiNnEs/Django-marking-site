@@ -15,8 +15,8 @@
             <li><a href="{% url 'add' %}">Diary</a></li>
             <li><a href="{% url 'contact' %}">Contact</a></li>
             <li><a href="{% url 'about' %}">About</a></li>
-            <li><a href="#">Sign Up</a></li>
-            <li><a href="##">Log up</a></li>
+            <li><a href="{% url 'sign_up' %}">Sign Up</a></li>
+            <li><a href="{% url 'log_up' %}">Log up</a></li>
         </ul>
     </div>
 </nav>
@@ -29,9 +29,9 @@
     </div>
     <div class="points">
         <ol>
-            <li><a href="{% url 'home' %}">Sign up</a></li>
-            <li><a href="{% url 'home' %}">Log in</a></li>
-            <li><a href="">Write a note</a></li>
+            <li><a href="{% url 'sign_up' %}">Sign up</a></li>
+            <li><a href="{% url 'log_up' %}">Log in</a></li>
+            <li><a href="{% url 'add' %}">Write a note</a></li>
             <li>Use the website for health</li>
         </ol>
     </div>
