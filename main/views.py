@@ -45,12 +45,12 @@ def about(request):
 
 
 def sign_up(request):
-    return render(request, 'main/sign_up.html', {
+    return render(request, 'allauth/account/signup.html', {
 
     })
 
 
-def log_up(reqeust):
-    return render(reqeust, 'main/log_up.html',{
+def log_in(reqeust):
+    return render(reqeust, 'allauth/account/login.html', {
 
     })

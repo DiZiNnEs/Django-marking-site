@@ -12,6 +12,20 @@ body {
     background-color: #333333;
 }
 
+.menu ul li:nth-child(7){
+    display: block;
+    font-size: 20px;
+    color: rgba(255, 17, 32, 0.62);
+    padding: 11px 5px 0px 40px;
+}
+
+.menu ul li:nth-child(5) {
+    padding: 0px 0px 0px 100px; /* The pixel decides :DD */
+}
+.menu ul li:nth-child(6) {
+    padding: 0px 0px 0px -50px;
+}
+
 .menu ul li {
     float: left;
 }

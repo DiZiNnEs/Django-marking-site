@@ -17,6 +17,9 @@
             <li><a href="{% url 'about' %}">About</a></li>
             <li><a href="{% url 'sign_up' %}">Sign Up</a></li>
             <li><a href="{% url 'log_up' %}">Log up</a></li>
+            {% if user.is_authenticated %}
+                <li>Hello, {{ user.username }}</li>
+            {% endif %} </li>
         </ul>
     </div>
 </nav>
