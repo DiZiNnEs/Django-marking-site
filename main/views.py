@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from .models import Notes, Contact, About
 from .forms import EntryNotes
+from django.contrib.auth.models import User
+from django.contrib.auth.models import AnonymousUser
 
 
 def index(request):
@@ -8,10 +10,18 @@ def index(request):
 
 
 def home(request):
-    notes = Notes.objects.order_by('-pub_date')
-    return render(request, 'main/home.html', {
-        'notes': notes,
-    })
+    # notes = Notes.objects.order_by('-pub_date')
+    # return render(request, 'main/home.html', {
+    #     'notes': notes,
+    # })
+
+    if request.user.is_authenticated:
+        notes = Notes.objects.filter(user=request.user).order_by('-pub_date')
+        return render(request, 'main/home.html', {
+            'notes': notes,
+        })
+    else:
+        return redirect('error')
 
 
 def add(request):
@@ -23,7 +33,6 @@ def add(request):
             return redirect('home')
     else:
         form = EntryNotes()
-
 
     context = {'form': form}
 
@@ -52,5 +61,10 @@ def sign_up(request):
 
 def log_in(reqeust):
     return render(reqeust, 'allauth/account/login.html', {
+
+    })
+
+def error(request):
+    return render(request, 'main/error.html', {
 
     })

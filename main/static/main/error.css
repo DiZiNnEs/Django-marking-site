@@ -1,0 +1,13 @@
+body {
+    paddding: 0;
+    margin: 0;
+    font-family: Arial;
+}
+
+main {
+    margin: 100px 0px 0px 100px;
+}
+
+.list-of-alleged-errors li {
+    margin: 10px 10px;
+}
