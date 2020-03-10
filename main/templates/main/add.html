@@ -16,7 +16,7 @@
             <li><a href="{% url 'contact' %}">Contact</a></li>
             <li><a href="{% url 'about' %}">About</a></li>
             <li><a href="{% url 'sign_up' %}">Sign Up</a></li>
-            <li><a href="{% url 'log_up' %}">Log in</a></li>
+            <li><a href="{% url 'log_in' %}">Log in</a></li>
             {% if user.is_authenticated %}
                 <li>Hello, {{ user.username }}</li>
             {% endif %} </li>
@@ -31,6 +31,7 @@
         {% csrf_token %}
         <div class="text-input">
             {{ form.text }}
+            {{ form.user }}
         </div>
 
         <div class="button-is-link">

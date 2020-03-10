@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth import get_user_model
-from django.contrib.auth.models import AnonymousUser
 
 User = get_user_model()
 
@@ -15,10 +14,6 @@ class Notes(models.Model):
 
     class Meta:
         verbose_name_plural = 'notes'
-
-    if user == AnonymousUser:
-        print('Here is AnonymousUser!!!!!!')
-
 
 
 class Contact(models.Model):

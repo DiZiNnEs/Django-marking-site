@@ -1,3 +1,4 @@
+from .models import Notes, Contact, About
 from django.forms import ModelForm
 from .models import Notes
 
@@ -5,7 +6,7 @@ from .models import Notes
 class EntryNotes(ModelForm):
     class Meta:
         model = Notes
-        fields = ('text',)
+        fields = ('text', 'user')
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

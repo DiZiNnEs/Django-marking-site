@@ -15,6 +15,7 @@ body {
 .menu ul li:nth-child(5) {
     padding: 0px 0px 0px 100px; /* The pixel decides :DD */
 }
+
 .menu ul li:nth-child(6) {
     padding: 0px 0px 0px -50px;
 }
@@ -37,7 +38,7 @@ body {
     background-color: #111111;
 }
 
-.menu ul li:nth-child(7){
+.menu ul li:nth-child(7) {
     display: block;
     font-size: 20px;
     color: rgba(255, 17, 32, 0.62);
