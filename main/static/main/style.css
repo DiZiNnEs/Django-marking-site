@@ -13,7 +13,7 @@ body {
 }
 
 .menu ul li:nth-child(5) {
-    padding: 0px 0px 0px 161px; /* The pixel decides :DD */
+    padding: 0px 0px 0px 120px; /* The pixel decides :DD */
 }
 
 .menu ul li:nth-child(6) {
@@ -26,7 +26,10 @@ body {
     color: rgba(255, 17, 32, 0.62);
     padding: 11px 5px 0px 5px;
 }
-
+.menu ul li:nth-child(8) {
+    position: absolute;
+    left: 1210px;
+}
 .menu ul li {
     float: left;
 }

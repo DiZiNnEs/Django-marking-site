@@ -27,6 +27,11 @@ body {
     padding: 0px 0px 0px -50px;
 }
 
+.menu ul li:nth-child(8) {
+    position: absolute;
+    left: 1210px;
+}
+
 .menu ul li {
     float: left;
 }

@@ -20,6 +20,7 @@
             {% if user.is_authenticated %}
                 <li>Hello, {{ user.username }}</li>
             {% endif %} </li>
+          <li><a href="{% url 'account_logout' %}">🔑</a></li>
         </ul>
     </div>
 </nav>

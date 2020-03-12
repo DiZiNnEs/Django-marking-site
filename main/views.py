@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth import logout
 from .models import Notes, Contact, About
 from .forms import EntryNotes
 from django.contrib.auth.models import User
@@ -19,18 +20,26 @@ def home(request):
 
 
 def add(request):
-    if request.method == "POST":
-        form = EntryNotes(request.POST)
+    if request.user.is_authenticated:
+        if request.method == "POST":
+            form = EntryNotes(request.POST)
 
-        if form.is_valid():
-            form.save()
-            return redirect('home')
+            if form.is_valid():
+                #form.save(commit=False)
+                #form.user = request.user
+                #form.save()
+                note = form.save(commit=False)
+                note.user = request.user
+                note.save()
+                return redirect('home')
+        else:
+            form = EntryNotes()
+
+        context = {'form': form}
+
+        return render(request, 'main/add.html', context)
     else:
-        form = EntryNotes()
-
-    context = {'form': form}
-
-    return render(request, 'main/add.html', context)
+        return redirect('log_in')
 
 
 def contact(request):
@@ -63,3 +72,4 @@ def error(request):
     return render(request, 'main/error.html', {
 
     })
+

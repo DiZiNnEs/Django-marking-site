@@ -20,6 +20,7 @@
             {% if user.is_authenticated %}
                 <li>Hello, {{ user.username }}</li>
             {% endif %} </li>
+          <li><a href="{% url 'account_logout' %}">🔑</a></li>
         </ul>
     </div>
 </nav>
@@ -31,7 +32,7 @@
         {% for con in contacts %}
             <ul>
                 <li><a href="{{ con.vk }}">My VK</a></li>
-                <li><a href="{{ con.telegram }}">Telegram</a></li>
+                <li>Telegram: DiZiNnEs</li>
                 <li><a href="{{ con.github }}">GitHub</a></li>
                 <li><a href="{{ con.habr }}">Habr</a></li>
             </ul>
