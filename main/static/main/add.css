@@ -20,18 +20,16 @@ body {
 }
 
 .menu ul li:nth-child(5) {
-    padding: 0px 0px 0px 100px; /* The pixel decides :DD */
+    padding: 0px 0px 0px 50px; /* The pixel decides :DD */
 }
 
 .menu ul li:nth-child(6) {
     padding: 0px 0px 0px -50px;
 }
-
 .menu ul li:nth-child(8) {
     position: absolute;
     left: 1210px;
 }
-
 .menu ul li {
     float: left;
 }
